@@ -63,7 +63,6 @@ namespace SimpleOnlineStore.Api.Services
         {
             return await _productRepository.GetByIdAsync(productId, cancellationToken)
                    ?? throw new ProductNotFundException();
-            //throw new KeyNotFoundException("Product not found.");
         }
 
         private void InvalidateProductCache(int productId)

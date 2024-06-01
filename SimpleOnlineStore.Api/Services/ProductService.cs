@@ -93,7 +93,6 @@ namespace SimpleOnlineStore.Api.Services
             var product = await _productRepository.GetByIdAsync(productId, cancellationToken);
             if (product == null)
             {
-                //throw new KeyNotFoundException("Product not found.");
                 throw new ProductNotFundException();
             }
 
